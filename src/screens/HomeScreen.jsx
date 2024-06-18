@@ -1,6 +1,7 @@
 import { View, ScrollView } from 'react-native';
 import styles from '../styles';
 import { Button, Card, Text } from 'react-native-paper';
+import { Image } from 'expo-image';
 
 function HomeScreen({ navigation }) {
     const handleBackToLogin = () => {
@@ -12,47 +13,40 @@ function HomeScreen({ navigation }) {
             <Text variant="titleLarge"
                 style={{
                     backgroundColor: "#00000",
-                    color: "white",
+                    color: "black",
                     fontSize: 17,
                     textAlign: "center",
                 }}
             >The best Meme's Page from Brazil</Text>
             <View style={styles.container}>
-                <Card>
-                    <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/1d/7f/8e/1d7f8e1b6f1b6f8e2b7c6a0c9a3a7b7f.jpg' }} />
-                    <Card.Content>
-                        <Text>Meme 1</Text>
-                        <Text>Description of the meme 1</Text>
-                    </Card.Content>
-                </Card>
-                <Card>
-                    <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/1d/7f/8e/1d7f8e1b6f1b6f8e2b7c6a0c9a3a7b7f.jpg' }} />
-                    <Card.Content>
-                        <Text>Meme 2</Text>
-                        <Text>Description of the meme 2</Text>
-                    </Card.Content>
-                </Card>
-                <Card>
-                    <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/1d/7f/8e/1d7f8e1b6f1b6f8e2b7c6a0c9a3a7b7f.jpg' }} />
-                    <Card.Content>
-                        <Text>Meme 3</Text>
-                        <Text>Description of the meme 3</Text>
-                    </Card.Content>
-                </Card>
-                <Card>
-                    <Card.Cover source={{ uri: 'https://i.pinimg.com/564x/1d/7f/8e/1d7f8e1b6f1b6f8e2b7c6a0c9a3a7b7f.jpg' }} />
-                    <Card.Content>
-                        <Text>Meme 4</Text>
-                        <Text>Description of the meme 4</Text>
-                    </Card.Content>
-                </Card>
-
+                <View style={{ height: 100, width: 100, alignSelf: 'center', marginTop: 10 }}>
+                    <Card style={styles.cardStyle}>
+                        <Card.Cover source={require("../images/carianiUm.jpg")} />
+                    </Card>
+                </View>
+                <View style={{ height: 100, width: 100, alignSelf: 'center', marginTop: 120 }}>
+                    <Card style={styles.cardStyle}>
+                        <Card.Cover source={require("../images/carianiDois.jpg")} />
+                    </Card>
+                </View>
+                <View style={{ height: 100, width: 100, alignSelf: 'center', marginTop: 120 }}>
+                    <Card style={styles.cardStyle}>
+                        <Card.Cover source={require("../images/carianiTres.png")} />
+                    </Card>
+                </View>
+                <View style={{ height: 100, width: 100, alignSelf: 'center', marginTop: 120, marginBottom: 100 }}>
+                    <Card style={styles.cardStyle}>
+                        <Card.Cover source={require("../images/carianiQuatro.jpg")} />
+                    </Card>
+                </View>
                 <Button title="voltar para a tela de login"
                     onPress={handleBackToLogin}
                     style={{
-                        marginTop: 10,
-                        width: 300,
+                        marginTop: 50,
+                        marginBottom: 20,
+                        width: 100,
                         alignSelf: 'center',
+                        backgroundColor: "white"
                     }}
                 >Back</Button>
             </View>
